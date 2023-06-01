@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;0,800;1,300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(173,214,255,1) 0%, rgba(255,233,251,1) 50%, rgba(206,255,247,1) 100%);;
+}
+.wrapper
+{
+    margin: 120px auto;
+    max-width: 400px;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(173,214,255,1) 0%, rgba(206,255,247,1) 100%);
+    border-radius: 10px;
+    padding: 25px;
+}
+.wrapper header
+{
+    font-size: 40px;
+    font-weight: 600;
+}
+.wrapper .inputfield
+{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+.wrapper .inputfield input
+{
+    width: 90%;
+    padding: 5px 5px 5px 10px;
+    font-size: 20px;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.wrapper .inputfield button
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background: rgb(150, 23, 192);
+    cursor: pointer;
+    opacity: 0.6;
+    pointer-events: none;
+}
+.wrapper .inputfield button.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.wrapper .todolist
+{
+    max-height: 250px;
+    overflow-y: auto;
+}
+.todolist li
+{
+    list-style-type: none;
+    height: 45px;
+    line-height: 45px;
+    position: relative;
+    background: #ffffff;
+    margin-bottom: 8px;
+    border-radius: 3px;
+    padding: 0 15px;
+    cursor: default;
+    overflow: hidden;
+}
+.todolist li #edit
+{
+    position: absolute;
+    right: -45px;
+    color: #111111;
+    width: 45px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.4s ease;
+
+}
+.todolist li #delete
+{
+    position: absolute;
+    right: -90px;
+    color: #fff;
+    width: 45px;
+    text-align: center;
+    border-radius: 0 3px 3PX 0;
+    background: rgb(227, 58, 58);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.todolist li:hover #edit
+{
+    right: 45px;
+}
+.todolist li:hover #delete
+{
+    right: 0px
+}
+.wrapper .footer
+{
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer button
+{
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background: rgb(150, 23, 192);
+    cursor: pointer;
+    padding: 6px 10px;
+    opacity: 0.6;
+    pointer-events: none;
+}
+.footer button.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
