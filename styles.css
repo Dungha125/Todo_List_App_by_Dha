@@ -18,6 +18,7 @@ body{
     background: linear-gradient(90deg, rgba(173,214,255,1) 0%, rgba(206,255,247,1) 100%);
     border-radius: 10px;
     padding: 25px;
+    box-shadow: 0px 0px 10px #8ac6e7;
 }
 .wrapper header
 {
@@ -54,6 +55,7 @@ body{
     cursor: pointer;
     opacity: 0.6;
     pointer-events: none;
+    box-shadow: 0 0 5px rgb(124, 124, 124);
 }
 .wrapper .inputfield button.active{
     opacity: 1;
