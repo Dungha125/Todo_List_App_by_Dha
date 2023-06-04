@@ -5,7 +5,6 @@ const deleteAllbtn = document.querySelector(".footer button");
 
 document.addEventListener("DOMContentLoaded",showTasks);
 
-
 inputBox.onkeyup = ()=>{
     let userData = inputBox.value;
     if(userData.trim() != 0){
