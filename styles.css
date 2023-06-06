@@ -104,11 +104,11 @@ body{
     cursor: pointer;
     transition: all 0.3s ease;
 }
-.todolist li:hover #edit,.todolist li:focus #edit
+.todolist li:hover #edit,.todolist li:active #edit
 {
     right: 45px;
 }
-.todolist li:hover #delete,.todolist li:focus #delete
+.todolist li:hover #delete,.todolist li:active #delete
 {
     right: 0px
 }

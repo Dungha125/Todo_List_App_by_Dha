@@ -2,7 +2,6 @@ const inputBox = document.querySelector(".inputfield input");
 const addbtn = document.querySelector(".inputfield button");
 const todoList = document.querySelector(".todolist");
 const deleteAllbtn = document.querySelector(".footer button");
-
 document.addEventListener("DOMContentLoaded",showTasks);
 
 inputBox.onkeyup = ()=>{
@@ -52,7 +51,7 @@ function showTasks() {
   let newLiTag = '';
   
   listArr.forEach((element, index) => {
-    newLiTag += `<li>${element} <span id="edit"><i class='bx bxs-edit'></i></span><span onclick="deleteTask(${index})" id="delete"><i class='bx bx-trash'></i></span></li>`;
+    newLiTag += `<li>${element} <span onclick="editTask(${index})" id="edit"><i class='bx bxs-edit'></i></span><span onclick="deleteTask(${index})" id="delete"><i class='bx bx-trash'></i></span></li>`;
   });
   
   todoList.innerHTML = newLiTag;
@@ -74,4 +73,19 @@ deleteAllbtn.onclick = ()=>{
     listArr = [];
     localStorage.setItem("New Todo", JSON.stringify(listArr));
   showTasks();
+}
+
+function editTask(index) {
+  let getLocalStorage = localStorage.getItem("New Todo");
+  let listArr = JSON.parse(getLocalStorage);
+  
+  // Hiển thị nội dung cần chỉnh sửa trong hộp thoại prompt
+  let editedTask = prompt("Chỉnh sửa nội dung công việc:", listArr[index]);
+  
+  // Kiểm tra nếu người dùng đã nhập nội dung mới
+  if (editedTask !== null && editedTask.trim() !== "") {
+    listArr[index] = editedTask;
+    localStorage.setItem("New Todo", JSON.stringify(listArr));
+    showTasks(); // Hiển thị danh sách công việc sau khi đã chỉnh sửa
+  }
 }
